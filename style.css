@@ -1,0 +1,776 @@
+/* ==========================================================================
+   1. FUENTES Y VARIABLES DE MARCA (PALETA JULY'S CROCHET)
+   ========================================================================== */
+@font-face {
+    font-family: 'Hello Valentica';
+    src: url('./fonts/Hello Valentina.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Tonos Morados / Lavanda */
+    --morado-medio: #a865b5;     /* Pantone 2583 */
+    --morado-oscuro: #4a156d;    /* Pantone 2617 */
+    --lavanda-pastel: #ded2f0;   /* Pantone 263 */
+    --blanco-fondo: #fbf9fe;     /* Fondo de página muy suave */
+
+    /* Tonos Verdes */
+    --verde-pastel: #a1d982;     /* Pantone 359 */
+    --verde-oscuro: #004d26;     /* Pantone 3537 */
+    
+    /* Textos generales */
+    --texto-oscuro: #2b2b2b;
+}
+
+/* ==========================================================================
+   2. CONFIGURACIÓN GENERAL / RESETS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--blanco-fondo); 
+    color: var(--texto-oscuro);
+}
+
+.container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2, .logo {
+    font-family: 'Hello Valentica', cursive;
+    font-weight: normal;
+}
+
+h2 {
+    color: var(--morado-oscuro);
+    font-size: 3rem; 
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #8e7aa0;
+    margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   3. MENÚ DE NAVEGACIÓN (HEADER & NAVBAR)
+   ========================================================================== */
+.navbar-centrada {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    gap: 15px;              
+}
+
+.header-logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.Logo-img {
+    height: 180px; 
+    width: auto;
+    display: block;
+}
+
+.decoracion-nav {
+    width: 180px;  
+    height: 180px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    pointer-events: none; 
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    gap: 50px; 
+    margin-top: 15px;
+}
+
+.nav-links li {
+    margin-left: 0; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    color: var(--morado-medio);
+    transform: translateY(-3px); 
+}
+
+/* ==========================================================================
+   4. SECCIÓN HERO (BANNER PRINCIPAL)
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    background-color: var(--lavanda-pastel);
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url('./IMG/LOGO PNG SIN FONDO-04.png'); 
+    background-repeat: no-repeat;
+    background-size: 55vw; 
+    background-position: 110% 60%; 
+    filter: brightness(0) invert(1);
+    opacity: 0.3; 
+    z-index: -1; 
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    color: #332244;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* ==========================================================================
+   5. COMPONENTES: BOTONES
+   ========================================================================== */
+.btn-primary {
+    background-color: #b19cd9; 
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #9a82c4;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: #5c3d75;
+    border: 2px solid #5c3d75;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #5c3d75;
+    color: white;
+}
+
+/* ==========================================================================
+   6. SECCIÓN: FRASE INSPIRADORA
+   ========================================================================== */
+.seccion-frase-inspiradora {
+    background-color: var(--blanco-fondo);       
+    padding: 50px 20px;              
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.frase-contenedor {
+    max-width: 650px;                
+    margin: 0 auto;                
+}
+
+.texto-frase {
+    font-family: 'Playfair Display', 'Georgia', serif; 
+    font-size: 1.35rem; 
+    font-style: italic;
+    color: #666;                  
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+}
+
+.origen-frase {
+    display: block;
+    font-family: sans-serif;         
+    font-size: 0.8rem;
+    text-transform: uppercase;       
+    letter-spacing: 2px;             
+    color: #9a84ad;                  
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   7. SECCIÓN: CATÁLOGO (CARRUSEL SWIPER)
+   ========================================================================== */
+.catalogo-section {
+    position: relative;
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.miCarrusel {
+    max-width: 1000px;
+    padding: 40px 0 !important; 
+}
+
+.producto-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(74, 21, 109, 0.05);
+    transition: transform 0.4s ease, opacity 0.4s ease; 
+    opacity: 0.5;
+    transform: scale(0.85); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide-active.producto-card {
+    opacity: 1;
+    transform: scale(1.08); 
+    box-shadow: 0 15px 35px rgba(74, 21, 109, 0.12);
+    border: 1px solid rgba(177, 156, 217, 0.2); 
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--morado-medio) !important;
+    transform: scale(0.7); 
+}
+
+.producto-card h3 {
+    font-size: 1.2rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 8px;
+}
+
+.producto-card .precio {
+    font-weight: bold;
+    color: var(--morado-medio);
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   8. SECCIÓN: PATRONES DE DESCARGA (CARRUSEL HORIZONTAL)
+   ========================================================================== */
+.patrones-section {
+    background-color: #fcf6ff;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.carruselPatrones {
+    max-width: 1000px;
+    padding: 30px 0 !important; /* Espacio para que la sombra del hover no se corte */
+    position: relative;
+}
+
+.patron-card {
+    background: #ffffff;
+    border: 1px solid #ebdcf5;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(74, 21, 109, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Permite que Swiper controle la altura */
+}
+
+.patron-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(74, 21, 109, 0.06);
+}
+
+.patron-card h3 {
+    font-size: 1.15rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.patron-card p {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.patron-card .btn-secondary {
+    margin-top: auto;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Personalización de flechas para patrones */
+.next-patron, .prev-patron {
+    color: var(--morado-medio) !important;
+    transform: scale(0.6);
+}
+
+/* ==========================================================================
+   9. SECCIÓN: SOBRE MÍ & CITAS (MUJERCITAS)
+   ========================================================================== */
+.sobre-mi-seccion {
+    background: white;
+    border-radius: 20px;
+    margin: 60px auto; 
+    box-shadow: 0 4px 15px rgba(74,21,109,0.02);
+    max-width: 1000px;
+    padding: 50px 40px;
+}
+
+.sobre-mi-contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: nowrap;
+}
+
+.sobre-mi-foto-container {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.foto-personal {
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 2;
+}
+
+.marco-decorativo {
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;   
+}
+
+.sobre-mi-texto {
+    flex: 1;
+    text-align: left; 
+}
+
+.sobre-mi-texto h2 {
+    margin-bottom: 15px;
+}
+
+.sobre-mi-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+blockquote {
+    position: relative;
+    margin-top: 25px;
+    font-style: italic;
+    color: #666;
+    border-left: 3px solid var(--morado-medio);
+    padding: 15px 40px 15px 20px; 
+    background: #faf8fd; 
+    border-radius: 0 10px 10px 0;
+}
+
+blockquote::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    background-image: url('./IMG/vectorflor2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+}
+
+/* ==========================================================================
+   10. SECCIÓN CONTACTO
+   ========================================================================== */
+.contacto-section {
+    background-color: #5c3d75;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contacto-section h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.contacto-botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 25px;
+    flex-wrap: wrap; 
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366; 
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebd58; 
+    transform: translateY(-3px);
+}
+
+.btn-instagram {
+    display: inline-block;
+    background-color: var(--morado-medio); 
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-instagram:hover {
+    background-color: var(--morado-oscuro); 
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   11. FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
+footer {
+    background-color: var(--morado-oscuro); 
+    color: var(--lavanda-pastel);           
+    padding: 25px 20px;                         /* 🪄 Ajustado de 7px a 25px para dar un respiro elegante */
+    text-align: center;
+    border-top: 4px solid var(--morado-medio); 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-isotipo-container {
+    margin-bottom: 15px; 
+}
+
+.footer-isotipo {
+    height: 90px; 
+    width: auto;  
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-isotipo:hover {
+    transform: rotate(10deg) scale(1.1); 
+}
+
+footer p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* 🚀 NUEVOS ESTILOS PARA LOS ENLACES DE INFORMACIÓN */
+.footer-info-links {
+    margin-bottom: 15px;                        /* Espaciado antes del copyright */
+}
+
+.footer-info-links a {
+    color: var(--lavanda-pastel);
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-info-links a:hover {
+    color: #ffffff;                             /* Brilla en blanco puro al pasar el mouse */
+}
+
+/* Firma elegante de la creadora */
+.creadora-firma {
+    font-size: 0.75rem !important;
+    opacity: 0.7;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   12. MEDIA QUERY - ADAPTACIÓN EXCLUSIVA PARA MÓVILES (CELULARES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar-centrada {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .header-logo-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        min-width: 150px; 
+    }
+
+    .Logo-img {
+        height: 90px !important;    
+        width: auto !important;     
+        max-width: 100% !important; 
+        display: block;
+    }
+
+    .decoracion-nav {
+        width: 30px !important;    
+        height: 30px !important;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        flex-direction: row;      
+        flex-wrap: wrap; 
+        justify-content: center;   
+        gap: 10px 15px;            
+        margin-top: 8px;
+        padding: 0 5px;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;        
+        letter-spacing: 1px;       
+    }
+
+    /* Sección Sobre Mí Responsiva */
+    .sobre-mi-seccion {
+        padding: 40px 15px !important;
+    }
+
+    .sobre-mi-contenido { 
+        display: flex;
+        flex-direction: column !important; 
+        align-items: center !important;    
+        gap: 35px !important;              
+    }
+
+    .sobre-mi-foto-container {
+        position: relative !important;
+        width: 250px !important;           
+        height: 250px !important;
+        margin: 0 auto !important;         
+        display: flex !important;
+    }
+
+    .foto-personal {
+        width: 80% !important;
+        height: 60% !important;
+        object-fit: cover !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 2 !important;             
+        border-radius: 15px;               
+    }
+
+    .marco-decorativo {
+        position: absolute !important;
+        top: 50% !important;               
+        left: 50% !important;               
+        transform: translate(-50%, -50%) !important; 
+        width: 320px !important;           
+        height: 320px !important;          
+        object-fit: contain !important;    
+        z-index: 1 !important;             
+        pointer-events: none;
+    }
+
+    .sobre-mi-texto {
+        width: 100% !important;            
+        text-align: center !important;     
+        padding: 0 10px !important;
+    }
+
+    .sobre-mi-texto h2 {
+        font-size: 1.8rem !important;      
+        margin-bottom: 15px;
+    }
+
+    blockquote {
+        margin: 20px auto 0 auto !important;
+        padding: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        text-align: left;                  
+    }
+
+    /* Botones de contacto en móvil */
+    .contacto-botones {
+        flex-direction: column !important; 
+        align-items: center !important;    
+        gap: 0 !important;                 
+    }
+
+    .btn-whatsapp {
+        margin-bottom: 15px !important;    
+        width: 85% !important;             
+        text-align: center;
+    }
+
+    .btn-instagram {
+        width: 85% !important;             
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   13. ESTILOS DE PÁGINAS INFORMATIVAS INTERNAS (ESTILO CORREGIDO)
+   ========================================================================== */
+.seccion-informativa-pagina {
+    max-width: 850px !important;    /* Ancho perfecto para que las líneas no sean eternas */
+    margin: 50px auto 90px auto;
+    padding: 0 25px;
+}
+
+.titulo-pagina-interna {
+    font-size: 3.5rem;
+    margin-top: 20px;
+}
+
+.contenido-legal-bloque {
+    text-align: left; 
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(74, 21, 109, 0.02);
+    border: 1px solid rgba(177, 156, 217, 0.1);
+    margin-top: 35px;
+}
+
+.contenido-legal-bloque h3 {
+    color: var(--morado-medio);
+    font-family: 'Segoe UI', Arial, sans-serif; /* Mantiene un título firme */
+    font-size: 1.35rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contenido-legal-bloque h3:first-child {
+    margin-top: 0;
+}
+
+/* 🪄 AQUÍ CONSEGUIMOS EL LOOK EXACTO DE LA FOTO */
+.contenido-legal-bloque p, 
+.contenido-legal-bloque li {
+    font-family: 'Montserrat', 'Segoe UI', sans-serif; /* Aplica la fuente limpia */
+    font-size: 1.05rem;             /* Tamaño ideal del texto */
+    font-weight: 400;               /* Grosor regular y fino */
+    line-height: 1.85;              /* Genera el espacio vertical ordenado entre líneas */
+    color: #444444;                 /* Un gris oscuro suave idéntico al de la muestra */
+    margin-bottom: 20px;            /* Separa los párrafos limpiamente */
+}
+
+.contenido-legal-bloque ul {
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.contenido-legal-bloque li {
+    margin-bottom: 12px;            /* Espaciado interno de las listas */
+}
