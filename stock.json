@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Amigurumi CR7",
+    "precio": 780,
+    "imagen": "IMG/Amigurumi CR7.jpeg",
+    "disponible": true,
+    "cantidad": 2,
+    "medidas": "15 cm de alto",
+    "color": "Blanco, beige y negro",
+    "material": "Hilo acrílico"
+  },
+  {
+    "nombre": "Llavero Woodstock",
+    "precio": 200,
+    "imagen": "IMG/llaveroWoodStock.jpeg",
+    "disponible": false,
+    "cantidad": 0,
+    "medidas": "6 cm de alto",
+    "color": "Amarillo y rojo",
+    "material": "Hilo acrílico"
+  }
+]
