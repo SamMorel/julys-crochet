@@ -1,22 +1,152 @@
 [
   {
-    "nombre": "Amigurumi CR7",
-    "precio": 780,
-    "imagen": "IMG/Amigurumi CR7.jpeg",
+    "nombre": "Llavero moño",
+    "precio": 100,
+    "imagen": "IMG/mono_llavero.jpg",
+    "disponible": true,
+    "cantidad": 4,
+    "medidas": "5x4 cm",
+    "color": "Rojo, verde y rosado",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Peluche osito",
+    "precio": 350,
+    "imagen": "IMG/osito_peluche.jpg",
     "disponible": true,
     "cantidad": 2,
     "medidas": "15 cm de alto",
-    "color": "Blanco, beige y negro",
-    "material": "Hilo acrílico"
+    "color": "Cafe",
+    "material": "Hilo algodon"
   },
   {
-    "nombre": "Llavero Woodstock",
-    "precio": 200,
-    "imagen": "IMG/llaveroWoodStock.jpeg",
-    "disponible": false,
-    "cantidad": 0,
-    "medidas": "6 cm de alto",
-    "color": "Amarillo y rojo",
-    "material": "Hilo acrílico"
+    "nombre": "Bucket hat - Tricolor",
+    "precio": 420,
+    "imagen": "IMG/bucket_tricolor.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "18 cm de alto y 55 cm contorno",
+    "color": "Rosa, beige y naranja",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Bucket hat - Malla",
+    "precio": 420,
+    "imagen": "IMG/bucket_malla.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "18 cm de alto y 55 cm contorno",
+    "color": "Verde",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Tubi",
+    "precio": 250,
+    "imagen": "IMG/hat.jpg",
+    "disponible": true,
+    "cantidad": 2,
+    "medidas": "18 cm de alto y 55 cm contorno",
+    "color": "Blanco y Rosado",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Llavero Pollito",
+    "precio": 150,
+    "imagen": "IMG/llavero_pollito.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "5 cm de alto",
+    "color": "Amarrillo",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Llavero Hongo",
+    "precio": 60,
+    "imagen": "IMG/llavero_hongo.jpg",
+    "disponible": true,
+    "cantidad": 2,
+    "medidas": "5 cm de alto",
+    "color": "Rojo con beige",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Peluche corazón",
+    "precio": 280,
+    "imagen": "IMG/corazon.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "18 cm de alto",
+    "color": "Rojo",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Top playa malla",
+    "precio": 600,
+    "imagen": "IMG/top_playa.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "18 cm de alto",
+    "color": "Amarillo",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Mini bolso malla",
+    "precio": 250,
+    "imagen": "IMG/mini_bolso.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "15 cm de alto",
+    "color": "Rosa fuscia",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Top Espalda descubierta",
+    "precio": 650,
+    "imagen": "IMG/top_espalda.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "15 cm de alto",
+    "color": "Rosa fuscia",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Tulipan",
+    "precio": 150,
+    "imagen": "IMG/tulipan.jpg",
+    "disponible": true,
+    "cantidad": 4,
+    "medidas": "15 cm de alto",
+    "color": "Rosa fuscia",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Peonias",
+    "precio": 150,
+    "imagen": "IMG/peonias.jpg",
+    "disponible": true,
+    "cantidad": 3,
+    "medidas": "15 cm de alto",
+    "color": "Rosa fuscia",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Rosa",
+    "precio": 150,
+    "imagen": "IMG/rosa.jpg",
+    "disponible": true,
+    "cantidad": 3,
+    "medidas": "15 cm de alto",
+    "color": "Rosa fuscia",
+    "material": "Hilo algodon"
+  },
+  {
+    "nombre": "Clavel",
+    "precio": 150,
+    "imagen": "IMG/Clavel.jpg",
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "15 cm de alto",
+    "color": "Rosa fuscia",
+    "material": "Hilo algodon"
   }
 ]
