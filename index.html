@@ -28,10 +28,10 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#stock">Stock</a></li>
                 <li><a href="#patrones">Patrones</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#stock">Stock</a></li>
             </ul>
         </nav>
     </header>
@@ -48,13 +48,13 @@
     <!-- SECCIÓN: CITA BÍBLICA INDEPENDIENTE -->
     <section class="seccion-frase-inspiradora">
         <div class="frase-contenedor">
-            <p class="texto-frase">"Todas vuestras cosas sean hechas con amor."</p>
-            <span class="origen-frase">1 Corintios 16:14</span>
+            <p class="texto-frase reveal">"Todas vuestras cosas sean hechas con amor."</p>
+            <span class="origen-frase reveal">1 Corintios 16:14</span>
         </div>
     </section>
 
     <!-- SECCIÓN: CATÁLOGO -->
-    <section id="catalogo" class="catalogo-section">
+    <section id="catalogo" class="catalogo-section reveal">
         <h2>Lo que he tejido</h2>
         <p class="subtitle">Modelos de referencia. Todo es hecho bajo pedido y 100% personalizado.</p>
 
@@ -71,7 +71,7 @@
                     <a href="https://www.instagram.com/p/DZVcJWASior/" target="_blank">
                         <img src="./IMG/chaleco.jpeg" alt="Chaleco">
                     </a>
-                    <h3>Chaleco de CrochetAmiguru</h3>
+                    <h3>Chaleco de Crochet</h3>
                     <p class="precio">Precio base: L. 560</p>
                 </div>
                 <div class="swiper-slide producto-card">
@@ -109,17 +109,17 @@
     </section>
 
 <!-- SECCIÓN: STOCK DISPONIBLE (VISTA PREVIA) -->
-<section id="stock" class="stock-preview-section">
+<section id="stock" class="stock-preview-section reveal">
     <h2>Stock Disponible</h2>
     <p class="subtitle">Piezas ya tejidas, listas para enviar.</p>
 
-    <div id="stock-preview-container" class="stock-preview-grid"></div>
+    <div id="stock-preview-container" class="stock-preview-grid reveal-cascada"></div>
 
     <a href="stock.html" class="btn-primary">Ver todo el stock</a>
 </section>
 
 <!-- SECCIÓN: PATRONES -->
-    <section id="patrones" class="patrones-section">
+    <section id="patrones" class="patrones-section reveal">
         <div class="container">
             <h2>Patrones de Crochet</h2>
             <p class="subtitle">¡Comparte el amor por el tejido! Descarga mis guías gratuitas.</p>
@@ -152,7 +152,7 @@
     </section>
 
     <!-- SECCIÓN: SOBRE MÍ -->
-    <section id="sobre-mi" class="container sobre-mi-seccion">
+    <section id="sobre-mi" class="container sobre-mi-seccion reveal">
         <div class="sobre-mi-contenido">
             <div class="sobre-mi-foto-container">
                 <img src="./IMG/yo.jpeg" alt="Samantha - July's Crochet" class="foto-personal">
@@ -171,7 +171,7 @@
     </section>
 
     <!-- SECCIÓN: CONTACTO -->
-    <section id="contacto" class="contacto-section">
+    <section id="contacto" class="contacto-section reveal">
         <h2>¿Tienes una idea en mente?</h2>
         <p>Escríbeme para cotizar tu proyecto personalizado.</p>
         <br>
@@ -183,7 +183,7 @@
 
     <!-- FOOTER / PIE DE PÁGINA -->
     <footer>
-        <div class="footer-container">
+        <div class="footer-container reveal">
             <div class="footer-isotipo-container">
                 <a href="#menu">
                     <img src="./IMG/LOGO PNG SIN FONDO-03.png" alt="July's Crochet Isotipo" class="footer-isotipo">
@@ -201,14 +201,27 @@
         </div>
     </footer>
 
+        </footer>
+
+    <!-- LIGHTBOX: VISOR DE IMAGEN AMPLIADA -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-cerrar">&times;</span>
+        <button class="lightbox-flecha lightbox-anterior">&#10094;</button>
+        <img class="lightbox-imagen" id="lightbox-img" src="" alt="Vista ampliada del producto">
+        <button class="lightbox-flecha lightbox-siguiente">&#10095;</button>
+        <span class="lightbox-contador" id="lightbox-contador"></span>
+    </div>
+
     <!-- 🪄 CARGA DE ARCHIVOS LOGICOS JAVASCRIPT AL FINAL -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 
-    <div id="lightbox" class="lightbox">
-    <span class="lightbox-cerrar">&times;</span>
-    <img class="lightbox-imagen" id="lightbox-img" src="" alt="Vista ampliada del producto">
-</div>
+</body>
+</html>
+
+    <!-- 🪄 CARGA DE ARCHIVOS LOGICOS JAVASCRIPT AL FINAL -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -83,23 +83,25 @@ window.addEventListener("scroll", function() {
    ========================================================================== */
 async function cargarStockPreview() {
     const contenedor = document.getElementById('stock-preview-container');
-    if (!contenedor) return; // Si no existe en esta página, no hace nada
+    if (!contenedor) return;
 
     try {
         const respuesta = await fetch('stock.json');
         const productos = await respuesta.json();
-        const destacados = productos.slice(0, 3); // Muestra máximo 3 en el index
+        const destacados = productos.slice(0, 4);
 
-        destacados.forEach(producto => {
+        destacados.forEach((producto, index) => {
             const tarjeta = document.createElement('div');
             tarjeta.className = 'stock-preview-card';
             tarjeta.innerHTML = `
-                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <img src="${producto.imagenes[0]}" alt="${producto.nombre}" data-producto-index="${index}" data-origen="preview">
                 <h3>${producto.nombre}</h3>
                 <p class="precio">L. ${producto.precio}</p>
             `;
             contenedor.appendChild(tarjeta);
         });
+
+        window.stockPreviewData = destacados; // Guarda los datos para que el lightbox los use
     } catch (error) {
         console.error('No se pudo cargar la vista previa del stock:', error);
     }
@@ -110,17 +112,16 @@ async function cargarStockPreview() {
    ========================================================================== */
 async function cargarListaStock() {
     const contenedor = document.getElementById('lista-stock');
-    if (!contenedor) return; // Si no existe en esta página, no hace nada
+    if (!contenedor) return;
 
     try {
         const respuesta = await fetch('stock.json');
         const productos = await respuesta.json();
 
-        productos.forEach(producto => {
+        productos.forEach((producto, index) => {
             const item = document.createElement('div');
             item.className = 'item-stock';
 
-            // Arma los detalles solo con los campos que el producto realmente tiene
             let detalles = '';
             if (producto.talla) detalles += `<p><strong>Talla:</strong> ${producto.talla}</p>`;
             if (producto.medidas) detalles += `<p><strong>Medidas:</strong> ${producto.medidas}</p>`;
@@ -130,7 +131,7 @@ async function cargarListaStock() {
 
             item.innerHTML = `
                 <div class="item-stock-cabecera">
-                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <img src="${producto.imagenes[0]}" alt="${producto.nombre}" data-producto-index="${index}" data-origen="lista">
                     <div class="item-stock-info">
                         <h3>${producto.nombre}</h3>
                         <p class="precio">L. ${producto.precio}</p>
@@ -144,48 +145,109 @@ async function cargarListaStock() {
                 </div>
             `;
 
-            // Al hacer clic en la cabecera, se abre/cierra el detalle
-            item.querySelector('.item-stock-cabecera').addEventListener('click', () => {
-                item.classList.toggle('abierto');
+            item.querySelector('.item-stock-cabecera').addEventListener('click', (evento) => {
+                if (evento.target.tagName !== 'IMG') item.classList.toggle('abierto');
             });
 
             contenedor.appendChild(item);
         });
+
+        window.stockListaData = productos; // Guarda los datos para que el lightbox los use
     } catch (error) {
         console.error('No se pudo cargar la lista de stock:', error);
     }
 }
 
 /* ==========================================================================
-   5. LIGHTBOX: AMPLIAR IMAGEN AL HACER CLIC (INDEX Y STOCK)
+   5. LIGHTBOX CON CARRUSEL DE FOTOS (INDEX Y STOCK)
    ========================================================================== */
 function activarLightbox() {
     const lightbox = document.getElementById('lightbox');
     if (!lightbox) return;
 
     const lightboxImg = document.getElementById('lightbox-img');
+    const contador = document.getElementById('lightbox-contador');
     const cerrar = document.querySelector('.lightbox-cerrar');
+    const btnAnterior = document.querySelector('.lightbox-anterior');
+    const btnSiguiente = document.querySelector('.lightbox-siguiente');
 
-    // Detecta clics en CUALQUIER imagen de producto (vista previa o lista completa)
+    let fotosActuales = [];
+    let indiceActual = 0;
+
+    function mostrarFoto() {
+        lightboxImg.src = fotosActuales[indiceActual];
+        const hayVarias = fotosActuales.length > 1;
+        btnAnterior.style.display = hayVarias ? 'flex' : 'none';
+        btnSiguiente.style.display = hayVarias ? 'flex' : 'none';
+        contador.style.display = hayVarias ? 'block' : 'none';
+        contador.textContent = `${indiceActual + 1} / ${fotosActuales.length}`;
+    }
+
     document.querySelectorAll('.stock-preview-card img, .item-stock-cabecera img').forEach(img => {
         img.addEventListener('click', (evento) => {
-            evento.stopPropagation(); // Evita que también se abra/cierre el detalle del producto
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
+            evento.stopPropagation();
+            const origen = img.dataset.origen;
+            const idx = img.dataset.productoIndex;
+            const datos = origen === 'preview' ? window.stockPreviewData : window.stockListaData;
+
+            fotosActuales = datos[idx].imagenes;
+            indiceActual = 0;
+            mostrarFoto();
             lightbox.classList.add('activo');
         });
     });
 
+    btnAnterior.addEventListener('click', () => {
+        indiceActual = (indiceActual - 1 + fotosActuales.length) % fotosActuales.length;
+        mostrarFoto();
+    });
+
+    btnSiguiente.addEventListener('click', () => {
+        indiceActual = (indiceActual + 1) % fotosActuales.length;
+        mostrarFoto();
+    });
+
     cerrar.addEventListener('click', () => lightbox.classList.remove('activo'));
     lightbox.addEventListener('click', (evento) => {
-        if (evento.target === lightbox) lightbox.classList.remove('activo'); // Cierra si haces clic fuera de la imagen
+        if (evento.target === lightbox) lightbox.classList.remove('activo');
+    });
+
+    // Permite navegar con las flechas del teclado
+    document.addEventListener('keydown', (evento) => {
+        if (!lightbox.classList.contains('activo')) return;
+        if (evento.key === 'ArrowLeft') btnAnterior.click();
+        if (evento.key === 'ArrowRight') btnSiguiente.click();
+        if (evento.key === 'Escape') lightbox.classList.remove('activo');
     });
 }
 
 async function iniciarStock() {
     await cargarStockPreview();
     await cargarListaStock();
-    activarLightbox(); // Se activa solo cuando ya existen las imágenes en la página
+    activarLightbox();
 }
 
 iniciarStock();
+
+/* ==========================================================================
+   6. ANIMACIÓN DE REVELADO AL HACER SCROLL (TODAS LAS PÁGINAS)
+   ========================================================================== */
+function activarScrollReveal() {
+    const elementos = document.querySelectorAll('.reveal, .reveal-cascada');
+    if (elementos.length === 0) return;
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+                observador.unobserve(entrada.target); // Solo se anima una vez
+            }
+        });
+    }, {
+        threshold: 0.15 // Se activa cuando el 15% del elemento ya es visible
+    });
+
+    elementos.forEach(el => observador.observe(el));
+}
+
+activarScrollReveal();

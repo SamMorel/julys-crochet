@@ -2,7 +2,7 @@
   {
     "nombre": "Llavero moño",
     "precio": 100,
-    "imagen": "IMG/mono_llavero.jpg",
+    "imagenes": ["IMG/monitos.jpg"],
     "disponible": true,
     "cantidad": 4,
     "medidas": "5x4 cm",
@@ -12,7 +12,7 @@
   {
     "nombre": "Peluche osito",
     "precio": 350,
-    "imagen": "IMG/osito_peluche.jpg",
+    "imagenes": ["IMG/osito.jpg"],
     "disponible": true,
     "cantidad": 2,
     "medidas": "15 cm de alto",
@@ -22,7 +22,7 @@
   {
     "nombre": "Bucket hat - Tricolor",
     "precio": 420,
-    "imagen": "IMG/bucket_tricolor.jpg",
+    "imagenes": ["IMG/bh_tricolor2.jpg", "IMG/bh_tricolor.jpg"],
     "disponible": true,
     "cantidad": 1,
     "medidas": "18 cm de alto y 55 cm contorno",
@@ -30,9 +30,19 @@
     "material": "Hilo algodon"
   },
   {
+    "nombre": "Top playa malla",
+    "precio": 600,
+    "imagenes": ["IMG/topPlaya.jpeg"],
+    "disponible": true,
+    "cantidad": 1,
+    "medidas": "18 cm de alto",
+    "color": "Amarillo",
+    "material": "Hilo algodon"
+  },
+  {
     "nombre": "Bucket hat - Malla",
     "precio": 420,
-    "imagen": "IMG/bucket_malla.jpg",
+    "imagenes": ["IMG/bh_verde.jpg"],
     "disponible": true,
     "cantidad": 1,
     "medidas": "18 cm de alto y 55 cm contorno",
@@ -42,7 +52,7 @@
   {
     "nombre": "Tubi",
     "precio": 250,
-    "imagen": "IMG/hat.jpg",
+    "imagenes": ["IMG/tubi.jpg"],
     "disponible": true,
     "cantidad": 2,
     "medidas": "18 cm de alto y 55 cm contorno",
@@ -52,7 +62,7 @@
   {
     "nombre": "Llavero Pollito",
     "precio": 150,
-    "imagen": "IMG/llavero_pollito.jpg",
+    "imagenes": ["IMG/pollito.jpg"],
     "disponible": true,
     "cantidad": 1,
     "medidas": "5 cm de alto",
@@ -62,7 +72,7 @@
   {
     "nombre": "Llavero Hongo",
     "precio": 60,
-    "imagen": "IMG/llavero_hongo.jpg",
+    "imagenes": ["IMG/honguitos.jpg"],
     "disponible": true,
     "cantidad": 2,
     "medidas": "5 cm de alto",
@@ -72,7 +82,7 @@
   {
     "nombre": "Peluche corazón",
     "precio": 280,
-    "imagen": "IMG/corazon.jpg",
+    "imagenes": ["IMG/corazon2.jpg", "IMG/corazon.jpg"],
     "disponible": true,
     "cantidad": 1,
     "medidas": "18 cm de alto",
@@ -80,19 +90,9 @@
     "material": "Hilo algodon"
   },
   {
-    "nombre": "Top playa malla",
-    "precio": 600,
-    "imagen": "IMG/top_playa.jpg",
-    "disponible": true,
-    "cantidad": 1,
-    "medidas": "18 cm de alto",
-    "color": "Amarillo",
-    "material": "Hilo algodon"
-  },
-  {
     "nombre": "Mini bolso malla",
     "precio": 250,
-    "imagen": "IMG/mini_bolso.jpg",
+    "imagenes": ["IMG/minibolso2.jpg", "IMG/minibolso.jpg"],
     "disponible": true,
     "cantidad": 1,
     "medidas": "15 cm de alto",
@@ -102,7 +102,7 @@
   {
     "nombre": "Top Espalda descubierta",
     "precio": 650,
-    "imagen": "IMG/top_espalda.jpg",
+    "imagenes": ["IMG/topFuscia3.jpeg", "IMG/topFuscia2.jpeg"],
     "disponible": true,
     "cantidad": 1,
     "medidas": "15 cm de alto",
@@ -112,7 +112,7 @@
   {
     "nombre": "Tulipan",
     "precio": 150,
-    "imagen": "IMG/tulipan.jpg",
+    "imagenes": ["IMG/tulip3.jpg", "IMG/tulip.jpg"],
     "disponible": true,
     "cantidad": 4,
     "medidas": "15 cm de alto",
@@ -122,7 +122,7 @@
   {
     "nombre": "Peonias",
     "precio": 150,
-    "imagen": "IMG/peonias.jpg",
+    "imagenes": ["IMG/peonias.jpg"],
     "disponible": true,
     "cantidad": 3,
     "medidas": "15 cm de alto",
@@ -132,7 +132,7 @@
   {
     "nombre": "Rosa",
     "precio": 150,
-    "imagen": "IMG/rosa.jpg",
+    "imagenes": ["IMG/rosas.jpg"],
     "disponible": true,
     "cantidad": 3,
     "medidas": "15 cm de alto",
@@ -142,7 +142,7 @@
   {
     "nombre": "Clavel",
     "precio": 150,
-    "imagen": "IMG/clavel.jpg",
+    "imagenes": ["IMG/clavel.jpg"],
     "disponible": true,
     "cantidad": 1,
     "medidas": "15 cm de alto",

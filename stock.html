@@ -25,15 +25,15 @@
             <ul class="nav-links">
                 <li><a href="index.html#inicio">Inicio</a></li>
                 <li><a href="index.html#catalogo">Catálogo</a></li>
+                <li><a href="stock.html#stock">Stock</a></li>
                 <li><a href="index.html#patrones">Patrones</a></li>
                 <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
-                <li><a href="stock.html#stock">Stock</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="seccion-informativa-pagina">
+    <section class="seccion-informativa-pagina seccion-stock-fondo reveal" id="stock">
         <h1 class="titulo-pagina-interna">Stock Disponible</h1>
         <p class="subtitle">Haz clic sobre una pieza para ver sus detalles.</p>
 
@@ -58,12 +58,24 @@
             <p class="creadora-firma" style="font-size: 0.75rem; opacity: 0.7; margin-top: 8px;">Diseñado y desarrollado por Samantha Alvarado</p>
         </div>
     </footer>
+
+        </footer>
+
+    <!-- LIGHTBOX: VISOR DE IMAGEN AMPLIADA -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-cerrar">&times;</span>
+        <button class="lightbox-flecha lightbox-anterior">&#10094;</button>
+        <img class="lightbox-imagen" id="lightbox-img" src="" alt="Vista ampliada del producto">
+        <button class="lightbox-flecha lightbox-siguiente">&#10095;</button>
+        <span class="lightbox-contador" id="lightbox-contador"></span>
+    </div>
+
     <script src="script.js"></script>
 
-    <div id="lightbox" class="lightbox">
-    <span class="lightbox-cerrar">&times;</span>
-    <img class="lightbox-imagen" id="lightbox-img" src="" alt="Vista ampliada del producto">
-</div>
+</body>
+</html>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

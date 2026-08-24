@@ -525,6 +525,56 @@ h2 {
 }
 
 /* ==========================================================================
+   7.5 LIGHTBOX CON MÚLTIPLES FOTOS (FLECHAS DE NAVEGACIÓN)
+   ========================================================================== */
+.lightbox-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.lightbox-flecha:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-anterior { left: 20px; }
+.lightbox-siguiente { right: 20px; }
+
+.lightbox-contador {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-flecha {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    .lightbox-anterior { left: 8px; }
+    .lightbox-siguiente { right: 8px; }
+}
+
+/* ==========================================================================
    8. SECCIÓN: PATRONES DE DESCARGA (CARRUSEL HORIZONTAL)
    ========================================================================== */
 .patrones-section {
@@ -984,4 +1034,44 @@ footer p {
 
 .contenido-legal-bloque li {
     margin-bottom: 12px;            /* Espaciado interno de las listas */
+}
+
+/* ==========================================================================
+   14. ANIMACIÓN DE REVELADO AL HACER SCROLL
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variante con retraso, útil para que varias tarjetas aparezcan en cascada */
+.reveal-cascada > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-cascada.visible > *:nth-child(1) { transition-delay: 0s; }
+.reveal-cascada.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-cascada.visible > *:nth-child(3) { transition-delay: 0.2s; }
+.reveal-cascada.visible > *:nth-child(4) { transition-delay: 0.3s; }
+
+.reveal-cascada.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respeta a quienes prefieren menos movimiento en pantalla (accesibilidad) */
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-cascada > * {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
 }
