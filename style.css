@@ -575,6 +575,31 @@ h2 {
 }
 
 /* ==========================================================================
+   7.6 LLAMADO A LA ACCIÓN AL FINAL DE STOCK
+   ========================================================================== */
+.stock-cta {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 2px dashed rgba(177, 156, 217, 0.3);
+    text-align: center;
+}
+
+.stock-cta h3 {
+    font-family: 'Hello Valentica', cursive;
+    font-weight: normal;
+    color: var(--morado-oscuro);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.stock-cta p {
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto 20px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
    8. SECCIÓN: PATRONES DE DESCARGA (CARRUSEL HORIZONTAL)
    ========================================================================== */
 .patrones-section {
