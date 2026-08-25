@@ -4,9 +4,9 @@
     "precio": 100,
     "imagenes": ["IMG/monitos.jpg"],
     "disponible": true,
-    "cantidad": 4,
-    "medidas": "5x4 cm",
-    "color": "Rojo, verde y rosado",
+    "cantidad": 3,
+    "medidas": "5 x 8 cm",
+    "color": "Rojo, rosado, cafe",
     "material": "Hilo algodon"
   },
   {
@@ -14,10 +14,10 @@
     "precio": 350,
     "imagenes": ["IMG/osito.jpg"],
     "disponible": true,
-    "cantidad": 2,
-    "medidas": "15 cm de alto",
+    "cantidad": 1,
+    "medidas": "17 cm de alto",
     "color": "Cafe",
-    "material": "Hilo algodon"
+    "material": "Hilo Chenille"
   },
   {
     "nombre": "Bucket hat - Tricolor",
@@ -25,17 +25,17 @@
     "imagenes": ["IMG/bh_tricolor2.jpg", "IMG/bh_tricolor.jpg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "18 cm de alto y 55 cm contorno",
+    "medidas": "18 cm de alto y 56 cm circunferencia",
     "color": "Rosa, beige y naranja",
     "material": "Hilo algodon"
   },
   {
-    "nombre": "Top playa malla",
+    "nombre": "Top Hawaiano",
     "precio": 600,
     "imagenes": ["IMG/topPlaya.jpeg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "18 cm de alto",
+    "medidas": "33 cm de alto, 36cm ancho (ajustable de espalda)",
     "color": "Amarillo",
     "material": "Hilo algodon"
   },
@@ -45,7 +45,7 @@
     "imagenes": ["IMG/bh_verde.jpg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "18 cm de alto y 55 cm contorno",
+    "medidas": "18 cm de alto y 56 cm circunferencia",
     "color": "Verde",
     "material": "Hilo algodon"
   },
@@ -55,8 +55,8 @@
     "imagenes": ["IMG/tubi.jpg"],
     "disponible": true,
     "cantidad": 2,
-    "medidas": "18 cm de alto y 55 cm contorno",
-    "color": "Blanco y Rosado",
+    "medidas": "15 cm de alto y 56 cm circunferencia",
+    "color": "Crema y Rosado",
     "material": "Hilo algodon"
   },
   {
@@ -65,9 +65,9 @@
     "imagenes": ["IMG/pollito.jpg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "5 cm de alto",
+    "medidas": "4.5 cm de alto",
     "color": "Amarrillo",
-    "material": "Hilo algodon"
+    "material": "Hilo Chenille"
   },
   {
     "nombre": "Llavero Hongo",
@@ -85,27 +85,27 @@
     "imagenes": ["IMG/corazon2.jpg", "IMG/corazon.jpg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "18 cm de alto",
+    "medidas": "19 cm de alto",
     "color": "Rojo",
-    "material": "Hilo algodon"
+    "material": "Hilo Chenille"
   },
   {
-    "nombre": "Mini bolso malla",
+    "nombre": "Net bag (mini)",
     "precio": 250,
     "imagenes": ["IMG/minibolso2.jpg", "IMG/minibolso.jpg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "15 cm de alto",
+    "medidas": "20 x 14 cm",
     "color": "Rosa fuscia",
-    "material": "Hilo algodon"
+    "material": "Hilo algodon, forro de tela manta"
   },
   {
-    "nombre": "Top Espalda descubierta",
+    "nombre": "Backless top",
     "precio": 650,
     "imagenes": ["IMG/topFuscia3.jpeg", "IMG/topFuscia2.jpeg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "15 cm de alto",
+    "medidas": "36 cm de alto, 80 cm contorno pecho",
     "color": "Rosa fuscia",
     "material": "Hilo algodon"
   },
@@ -115,8 +115,8 @@
     "imagenes": ["IMG/tulip3.jpg", "IMG/tulip.jpg"],
     "disponible": true,
     "cantidad": 4,
-    "medidas": "15 cm de alto",
-    "color": "Rosa fuscia",
+    "medidas": "30 cm de alto",
+    "color": "Amarillo, Naranja, Rosado",
     "material": "Hilo algodon"
   },
   {
@@ -124,19 +124,19 @@
     "precio": 150,
     "imagenes": ["IMG/peonias.jpg"],
     "disponible": true,
-    "cantidad": 3,
-    "medidas": "15 cm de alto",
-    "color": "Rosa fuscia",
+    "cantidad": 2,
+    "medidas": "30 cm de alto",
+    "color": "Morado lila, Azul celeste",
     "material": "Hilo algodon"
   },
   {
-    "nombre": "Rosa",
+    "nombre": "Rosas",
     "precio": 150,
     "imagenes": ["IMG/rosas.jpg"],
     "disponible": true,
     "cantidad": 3,
-    "medidas": "15 cm de alto",
-    "color": "Rosa fuscia",
+    "medidas": "30 cm de alto",
+    "color": "Rojo, amarillo, DC morados",
     "material": "Hilo algodon"
   },
   {
@@ -145,8 +145,8 @@
     "imagenes": ["IMG/clavel.jpg"],
     "disponible": true,
     "cantidad": 1,
-    "medidas": "15 cm de alto",
-    "color": "Rosa fuscia",
+    "medidas": "30 cm de alto",
+    "color": "Rosado",
     "material": "Hilo algodon"
   }
 ]

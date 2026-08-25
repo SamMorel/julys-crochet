@@ -54,28 +54,29 @@ if (document.querySelector('.carruselPatrones')) {
 }
 
 /* ==========================================================================
-   2. NAVBAR INTERACTIVA (COMPORTAMIENTO STICKY AL HACER SCROLL)
+   2. NAVBAR INTERACTIVA (COMPORTAMIENTO STICKY AL HACER SCROLL) - OPTIMIZADO
    ========================================================================== */
 let ultimoScrollTop = 0;
 const miHeader = document.querySelector("header");
+let scrollTicking = false;
 
 window.addEventListener("scroll", function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Evita errores con el rebote elástico de pantallas móviles
-    if (scrollTop < 0) {
-        scrollTop = 0;
-    }
+    if (!scrollTicking) {
+        window.requestAnimationFrame(function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop < 0) scrollTop = 0;
 
-    if (scrollTop > ultimoScrollTop && scrollTop > 150) {
-        // Si vas hacia ABAJO y ya bajaste más de 150px, esconde el menú
-        miHeader.classList.add("scroll-abajo");
-    } else {
-        // Si vas hacia ARRIBA, vuelve a mostrar el menú de inmediato
-        miHeader.classList.remove("scroll-abajo");
+            if (scrollTop > ultimoScrollTop && scrollTop > 150) {
+                miHeader.classList.add("scroll-abajo");
+            } else {
+                miHeader.classList.remove("scroll-abajo");
+            }
+
+            ultimoScrollTop = scrollTop;
+            scrollTicking = false;
+        });
+        scrollTicking = true;
     }
-    
-    ultimoScrollTop = scrollTop;
 });
 
 /* ==========================================================================
@@ -131,8 +132,7 @@ async function cargarListaStock() {
 
             item.innerHTML = `
                 <div class="item-stock-cabecera">
-                    <img src="${producto.imagenes[0]}" alt="${producto.nombre}" data-producto-index="${index}" data-origen="lista">
-                    <div class="item-stock-info">
+                <img src="${producto.imagenes[0]}" alt="${producto.nombre}" data-producto-index="${index}" data-origen="lista" loading="lazy">                    <div class="item-stock-info">
                         <h3>${producto.nombre}</h3>
                         <p class="precio">L. ${producto.precio}</p>
                     </div>
