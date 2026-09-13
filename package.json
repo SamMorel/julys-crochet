@@ -1,0 +1,12 @@
+{
+  "name": "julys-crochet",
+  "version": "1.0.0",
+  "description": "July's Crochet - Arte Hecho a Mano",
+  "private": true,
+  "scripts": {
+    "build": "npm install"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
